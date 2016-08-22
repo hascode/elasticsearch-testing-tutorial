@@ -1,6 +1,6 @@
 # Elasticsearch Java Testing Tutorial
 
-Examples how to run different test types for [Elasticsearch].
+Examples how to run integration tests for Java applications using [Elasticsearch].
 
 Please feel free to take a look at my blog at [www.hascode.com] for the full tutorial.
 
@@ -8,7 +8,7 @@ Please feel free to take a look at my blog at [www.hascode.com] for the full tut
 Run the tests using your IDE of choice or Maven:
 
 ```
-mvn test
+mvn integration-test
 ```
 
 ----

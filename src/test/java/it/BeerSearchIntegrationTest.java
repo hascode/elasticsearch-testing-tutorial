@@ -16,7 +16,7 @@ import com.hascode.tutorial.entity.Beer;
 
 @ClusterScope(scope = Scope.SUITE)
 @ThreadLeakScope(ThreadLeakScope.Scope.NONE)
-public class SomeIntegrationTest extends ESIntegTestCase {
+public class BeerSearchIntegrationTest extends ESIntegTestCase {
     @Test
     public void shouldIndexAndSearchBeers() throws Exception {
         Client client = client();
