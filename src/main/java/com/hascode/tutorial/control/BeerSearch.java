@@ -32,8 +32,9 @@ public class BeerSearch {
                 response.getIndex(), response.getType(), response.getVersion(), response.getId(), response.isCreated());
     }
 
-    public List<Beer> findByTag(String tag) {
+    public List<Beer> findByTag(String tag) throws InterruptedException {
         System.out.printf("searching beers for given tag: %s\n", tag);
+        Thread.sleep(2000); // fake delay
         SearchResponse response = client.prepareSearch(INDEX).setTypes(TYPE_BEER).addFields("name", "tags")
                 .setQuery(QueryBuilders.termQuery("tags", tag)).execute().actionGet();
         SearchHits hits = response.getHits();
