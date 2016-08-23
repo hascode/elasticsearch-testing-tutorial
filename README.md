@@ -1,3 +1,5 @@
+[![build-status](https://pipelines-badges-service.useast.staging.atlassian.io/badge/hascode/elasticsearch-testing-tutorial.svg)](https://bitbucket.org/hascode/elasticsearch-testing-tutorial/addon/pipelines/home)
+
 # Elasticsearch Java Testing Tutorial
 
 Examples how to run integration tests for Java applications using [Elasticsearch].
