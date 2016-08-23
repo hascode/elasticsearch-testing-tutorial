@@ -31,6 +31,7 @@ public class Main {
         search.add(new Beer("3", "Kilkenny", "mild", "sweet"));
         search.add(new Beer("4", "Budvar", "tasty", "crispy"));
 
+        Thread.sleep(2000);
         List<Beer> beers = search.findByTag("tasty");
         beers.forEach(System.out::println);
 
