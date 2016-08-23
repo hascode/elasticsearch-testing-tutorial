@@ -72,10 +72,12 @@
 			<artifactId>elasticsearch</artifactId>
 			<version>${elasticsearch.version}</version>
 		</dependency>
+		<!-- comment in to avoid JNA exceptions from elasticsearch, Bitbucket Pipelines will fail with JNA activated, because execution as user root is not allowed ..
 		<dependency>
 			<groupId>net.java.dev.jna</groupId>
 			<artifactId>jna</artifactId>
 			<version>4.2.2</version>
 		</dependency>
+		-->
 	</dependencies>
 </project>
