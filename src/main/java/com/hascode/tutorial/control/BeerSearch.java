@@ -23,6 +23,10 @@ public class BeerSearch {
         this.client = client;
     }
 
+    /**
+     * Adds a given beer to the search index.
+     * @param beer the beer.
+     */
     public void add(Beer beer) {
         System.out.printf("adding beer to search index: %s\n", beer);
         IndexRequest indexRequest = new IndexRequest(INDEX, TYPE_BEER, beer.getId());
@@ -32,6 +36,11 @@ public class BeerSearch {
                 response.getIndex(), response.getType(), response.getVersion(), response.getId(), response.isCreated());
     }
 
+    /**
+     * Searches beers by given tag
+     * @param tag the tag
+     * @return a list of beers
+     */
     public List<Beer> findByTag(String tag) {
         System.out.printf("searching beers for given tag: %s\n", tag);
         SearchResponse response = client.prepareSearch(INDEX).setTypes(TYPE_BEER).addFields("name", "tags")
